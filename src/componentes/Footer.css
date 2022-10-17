@@ -1,0 +1,31 @@
+.footer {
+    background: #121214;
+    color: #FFF;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer p {
+    color: #1B873F;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: block;
+        text-align:center;
+    }
+    .logo {
+        display:none;
+    }
+  }

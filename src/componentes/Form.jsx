@@ -6,23 +6,23 @@ import './Form.css'
 
 export function Form(props) {
 
-    const [name, setName] = useState('')
-    const [role, setRole] = useState('')
-    const [image, setImage] = useState('')
-    const [team, setTeam] = useState('')
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoColaboradorCadastrado({
-            name,
-            role,
-            image,
-            team
+            nome,
+            cargo,
+            imagem,
+            time
         })
-        setName('')
-        setRole('')
-        setImage('')
-        setTeam('')
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -33,28 +33,28 @@ export function Form(props) {
                     required={true}
                     label="Nome"
                     placeholder="Digite seu nome" 
-                    value={name}
-                    hasChanged={value => setName(value)}
+                    value={nome}
+                    hasChanged={value => setNome(value)}
                 />
                 <CampoTexto
                     required={true}
                     label="Cargo"
                     placeholder="Digite seu cargo" 
-                    value={role}
-                    hasChanged={value => setRole(value)}
+                    value={cargo}
+                    hasChanged={value => setCargo(value)}
                 />
                 <CampoTexto
                     label="Imagem"
                     placeholder="Digite o endereço da imagem" 
-                    value={image}
-                    hasChanged={value => setImage(value)}
+                    value={imagem}
+                    hasChanged={value => setImagem(value)}
                 />
                 <List
                     required={true}
                     label="Time" 
                     itens={props.times}
-                    value={team}
-                    hasChanged={value => setTeam(value)}
+                    value={time}
+                    hasChanged={value => setTime(value)}
                 />
                 <Button>
                     Criar Card

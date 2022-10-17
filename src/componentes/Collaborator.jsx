@@ -1,13 +1,20 @@
-import './Collaborator.css'
+import './Collaborator.css';
 
-export function Collaborator({ name, image, role, corDeFundo }){
-    return (<div className='collaborator'>
-        <div className='head' style={{ backgroundColor: corDeFundo }}>
-            <img src={image} alt={name}/>
-        </div>
-        <div className='footer'>
-            <h4>{name}</h4>
-            <h5>{role}</h5>
-        </div>
-    </div>)
+export function Collaborator({ nome, imagem, cargo, corDeFundo }) {
+	return (
+		<div className="colaborador">
+			<div
+				className="cabecalho"
+				style={{ backgroundColor: corDeFundo }}>
+				<img
+					src={imagem}
+					alt={nome}
+				/>
+			</div>
+			<div className="rodape">
+				<h4>{nome}</h4>
+				<h5>{cargo}</h5>
+			</div>
+		</div>
+	);
 }
